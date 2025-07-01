@@ -1,6 +1,17 @@
 # Omakase Ruby styling for Rails
 inherit_gem: { rubocop-rails-omakase: rubocop.yml }
-
+AllCops:
+  TargetRubyVersion: 3.3
+  Exclude:
+    - "app/views/**/*"   # ← Ignora todos os .erb
+    - "app/assets/**/*"
+    - "node_modules/**/*"
+    - "bin/**/*"
+    - "db/schema.rb"
+    - "db/migrate/**/*"
+    - "config/**/*"
+    - "spec/**/*"
+    - "test/**/*"
 # Overwrite or add rules to create your own house style
 #
 # # Use `[a, [b, c]]` not `[ a, [ b, c ] ]`
